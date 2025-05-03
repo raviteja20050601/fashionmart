@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Shopping Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main-container {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Online Store</h1>
+  </header>
+
+  <div class="main-container">
+    <!-- Home Section -->
+    <div id="home-section" class="card">
+      <h2>Welcome to Our Store</h2>
+      <p>Find the best products at amazing prices. Click below to start shopping!</p>
+      <button onclick="showShop()">Go to Shop</button>
+    </div>
+
+    <!-- Shop Section -->
+    <div id="shop-section" class="card hidden">
+      <h2>Shopping Options</h2>
+
+      <div>
+        <label><strong>Choose Payment Method:</strong></label>
+        <select>
+          <option>Cash on Delivery</option>
+          <option>Credit/Debit Card</option>
+          <option>UPI / Mobile Payments</option>
+          <option>Net Banking</option>
+        </select>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label><strong>Estimated Delivery:</strong></label>
+        <p>Standard Shipping: 3–5 Business Days<br>Express Shipping: 1–2 Business Days</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label><strong>Shipping Address:</strong></label>
+        <input type="text" placeholder="Enter your address here..." />
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label><strong>Return & Refund Policy:</strong></label>
+        <p>7-day hassle-free return. Refunds processed within 3 working days.</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label><strong>Customer Support:</strong></label>
+        <p>Email: support@onlinestore.com<br>Phone: +1-800-123-4567</p>
+      </div>
+
+      <button onclick="goHome()">Back to Home</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 My Online Store | All rights reserved.
+  </footer>
+
+  <script>
+    function showShop() {
+      document.getElementById('home-section').classList.add('hidden');
+      document.getElementById('shop-section').classList.remove('hidden');
+    }
+
+    function goHome() {
+      document.getElementById('shop-section').classList.add('hidden');
+      document.getElementById('home-section').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
+
